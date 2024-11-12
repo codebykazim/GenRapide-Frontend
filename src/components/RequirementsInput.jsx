@@ -4,7 +4,7 @@ import { ArrowsPointingOutIcon, XMarkIcon } from "@heroicons/react/24/outline";
 export default function RequirementsInput({
   requirementsText,
   setRequirementsText,
-  setRequirementsFile
+  setRequirementsFile,
 }) {
   const [expandRequirements, setExpandRequirements] = useState(false);
 

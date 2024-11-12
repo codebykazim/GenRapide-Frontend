@@ -10,7 +10,7 @@ export default function UploadForm({
   isLoading,
   matchPercentage,
   finalResult,
-  downloadLink
+  downloadLink,
 }) {
   const [requirementsFile, setRequirementsFile] = useState(null);
   const [resumeFile, setResumeFile] = useState(null);

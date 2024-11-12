@@ -22,7 +22,6 @@ export default function App() {
       setFinalResult(responseData.finalResult);
       setDownloadLink(responseData.downloadLink);
       console.log(responseData.downloadLink);
-
     } catch (error) {
       console.error("Error uploading data:", error);
     } finally {

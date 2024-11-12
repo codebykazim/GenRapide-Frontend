@@ -4,7 +4,7 @@ import { ArrowsPointingOutIcon, XMarkIcon } from "@heroicons/react/24/outline";
 export default function ResumeInput({
   resumeText,
   setResumeText,
-  setResumeFile
+  setResumeFile,
 }) {
   const [expandResume, setExpandResume] = useState(false);
 
