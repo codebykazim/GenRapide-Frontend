@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { FileIcon } from 'lucide-react'
 import { ExtractedDataTable } from '@/components/ExtractedDataTable'
+import { LoadingSpinner } from '@/components/LoadingSpinner'
 import axios from 'axios'
 
 export default function PDFDetailsPage({ params }) {
@@ -58,7 +59,7 @@ export default function PDFDetailsPage({ params }) {
   };
 
   if (!pdfData) {
-    return <div className="min-h-screen bg-[#101115] text-[#cfcfd1] p-6">Loading...</div>
+    return <LoadingSpinner/>
   }
 
   return (
