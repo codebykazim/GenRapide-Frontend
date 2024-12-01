@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --scrollbar-thumb: #232428; /* Dark gray scrollbar thumb color */
+  --scrollbar-track: #16171b; /* Dark color for the scrollbar track */
+  --scrollbar-thumb-hover: rgb(249, 115, 22); /* Orange on hover */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Custom Scrollbar Styles */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track); /* Dark gray track */
+  }
+
+  /* The thumb (the draggable part) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb); /* Dark gray thumb */
+    border-radius: 4px;
+    border: none;
+  }
+
+  /* Hover effect for the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover); /* Change to orange on hover */
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+}
